@@ -1,10 +1,9 @@
 const connection = require("./config/connection");
 const inquirer = require("inquirer");
 const conTable = require("console.table");
-const mySQL = require("mysql");
 
 // Prompt User for Choices
-const promptUser = () => {
+const runEmployeeDB = () => {
   inquirer
     .prompt([
       {
@@ -92,7 +91,7 @@ function viewAllEmployees() {
     function(err, res) {
       if (err) throw err
       console.log ("");
-      console.log("*** EMPLOYEES LIST ***");
+      console.log("Employee List");
       console.log ("");
       console.table(res)
       runEmployeeDB()
@@ -106,12 +105,12 @@ function addDepartment() {
         {
           name: "name",
           type: "input",
-          message: "What Department would you like to add?"
+          message: "What department would you like to add?"
         },
         {
             name: "id",
             type: "input",
-            message: "What is the new Department ID number? "
+            message: "What is the new Department ID number?"
           }
 
     ]).then(function(answers) {
@@ -182,7 +181,7 @@ function addRole() {
           {
             name: "department",
             type: "rawlist",
-            message: "Under which department does this new role fall?",
+            message: "Which department will contain this new role?",
             choices: selectDepartment()
           }
       ]).then(function(answers) {
