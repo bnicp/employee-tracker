@@ -1,6 +1,6 @@
 const connection = require("./config/connection");
 const inquirer = require("inquirer");
-const conTable = require("console.table");
+const consTable = require("console.table");
 
 // Prompt User for Choices
 const runEmployeeDB = () => {
@@ -245,3 +245,5 @@ function updateEmployeeRole() {
             });
         });
   };
+
+  runEmployeeDB();
