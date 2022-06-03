@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL. It enables a user to add, edit, and delete employee information.
+This is a command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL. It enables a user to add, edit, and delete employee information.
 
 ## Table of Contents
 

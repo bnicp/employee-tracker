@@ -1,6 +1,8 @@
 const connection = require('./config/connection');
 const inquirer = require('inquirer');
 const conTable = require('console.table');
+const mySQL = require("mysql");
+
 
 // Prompt User for Choices
 const promptUser = () => {
